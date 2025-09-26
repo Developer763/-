@@ -7,7 +7,7 @@ from aiogram.types import ChatPermissions
 
 import os
 
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("8347021575:AAET7hZLnsAuqROs35GD9G08CWhHEM6sVBE")
 
 logging.basicConfig(level=logging.INFO)
 
