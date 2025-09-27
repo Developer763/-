@@ -40,14 +40,11 @@ async def remove_admin(message: types.Message):
 
 @dp.message(Command("admins"))
 async def list_admins(message: types.Message):
-    admins = await bot.get_chat_administrators(message.chat.id)
-
     if not admins:
         await message.reply("Администраторов пока нет.")
     else:
-        text = "👮‍♂️ Список администраторов:\n" + "\n".join(
-            [f"{admin.user.full_name} (@{admin.user.username})" for admin in admins]
-        )
+        text = "👮 Список администраторов:" 
+        + "\n".join([str(uid) for uid in admins])
         await message.reply(text)
 
 @dp.message(Command("ban"))
